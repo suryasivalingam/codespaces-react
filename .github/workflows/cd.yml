@@ -15,7 +15,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - uses: docker/build-push-action@v6
         with:
-          tags: ghcr.io/suryasivalingam/codespaces-react
+          tags: ghcr.io/${{github.repository}}
           push: true
           build-args: |
             NPM_TOKEN=${{secrets.NPM_AUTH_TOKEN}}
